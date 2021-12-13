@@ -1,5 +1,5 @@
 FROM debian:latest
-MAINTAINER Mr. Donut<donutman@gmail.com>
+MAINTAINER tylerbarty <tyler.barty@gmail.com>
 
 RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y cowsay \
@@ -7,7 +7,7 @@ RUN apt-get update \
 ADD menu.sh /
 RUN ["chmod", "+x", "menu.sh"]
 
-USER donuteater
+USER tylerbarty
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 CMD ["/menu.sh"]
